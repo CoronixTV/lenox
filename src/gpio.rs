@@ -66,11 +66,14 @@ impl OutPin {
     }
 }
 
-
 pub struct InPin {
     pub pin: u32,
 }
-
+fn get_in_pin(pin: u32) -> InPin {
+    InPin {
+        pin: pin,
+    }
+}
 impl InPin {
     fn read(&self) -> State{
         let reg = self.pin/10;

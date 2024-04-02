@@ -7,7 +7,7 @@ use core::arch::asm;
 
 use gpio::OutPin;
 
-
+ mod pwm;
 
 #[link_section = ".text._start"]
 #[no_mangle]
