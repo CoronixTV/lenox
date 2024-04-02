@@ -15,9 +15,9 @@ pub extern "C" fn _start() -> ! {
     let pin = gpio::get_out_pin(16);
     loop {
         pin.set(gpio::State::High);
-        sleep::sleep(1, pi::Raspberrys::Pi3Plus);
+        sleep::sleep(1.0, pi::Raspberrys::Pi3Plus);
         pin.set(gpio::State::Low);
-        sleep::sleep(1, pi::Raspberrys::Pi3Plus);
+        sleep::sleep(1.0, pi::Raspberrys::Pi3Plus);
     }
 }
 #[panic_handler]
